@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 January 23</title>
-</head>
-<body>
-    <h1>Hello January class.</h1>
-    <h1>Harry Potter Idea</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <link rel="stylesheet" href="/style.css" />
+    <title>Elon on Mars</title>
+  </head>
+  <body>
+    <div class="game-intro">
+     <!-- <img src="./images/logo.png" alt="" class="logo-img" /> -->
+      
+      <button id="start">StartGame</button>
+      
+      <!--<img src="./images/arrows.png" alt="" class="arrows-img" />-->
+    </div>
 
+    <div id="game-board">
+      <canvas id="canvas" width="1350px" height="900px"></canvas>
+    </div>
 
-
-    <!--<script>...add dot in front of /...SOURCE in github if nothing appears on github.com (only for paths)-->
-    <script src=""></script>
-</body>
+   <script type="text/javascript" src="scripts/component.js"></script>
+    <script type="text/javascript" src="scripts/game.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
 </html>
