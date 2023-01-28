@@ -49,3 +49,26 @@ body {
   
   }
 
+  #start {
+      border:none;
+      appearance:none;
+      outline:none;
+      display:inline-block;
+      font-size:1.5em;
+      cursor:pointer;
+      text-decoration:none;
+      padding:12px 48px 12px 48px;
+      border-radius:4px;
+      color:#ffffff;
+      background-color:#9f3102;
+      border: 2px solid #ffffff;
+  }
+  button {   
+    transition-duration: 0.4s; 
+  }
+  button:hover {
+      font-size:1.6em;
+      background-color:#c47e05;
+  }
+  
+
