@@ -1,11 +1,11 @@
 body {
     padding: 0;
+    margin: 0;
     text-align: center;
   }
   
   .game-intro {
     float: left;
-    padding: 0% 10%;
   }
   
   .game-intro p {
@@ -14,8 +14,11 @@ body {
   }
   
   #game-board {
-      float: left;
-      padding: 20px 0px;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
      
   }
   
@@ -34,20 +37,20 @@ body {
 
 .background-image {
   background-image: url('Images/backgroung full screen.png');
-  width: 1350px;
+  width: 1300px;
   height: 900px;
 }
 
   #canvas {
-    background-image: url('Images/background.jpg');
+/*     background-image: url('Images/NEWbackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1100px;
-    height: 650px;
+    width: 1000px;
+    height: 900px; */
     position: relative;
-    border: #9f3102;
+  /*   border: #9f3102; */
     align-items: center;
-  }
+  } 
   
   
 

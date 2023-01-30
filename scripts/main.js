@@ -10,7 +10,7 @@ const player = new Component(220, 550, 50, 100, "image", ctx);
 
 startButton.onclick = function (){
     
-    const game = new Game(ctx, 1350, 900, player);
+    const game = new Game(ctx, 1300, 900, player);
     game.start();
     startButton.style.display = 'none';
     canvas.classList.remove('hidden');

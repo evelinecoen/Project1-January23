@@ -13,7 +13,8 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "Images/racket.png"
+    this.img.src= "/Images/racket.png"
+    
     }
 
     draw(){
