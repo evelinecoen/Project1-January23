@@ -11,18 +11,24 @@ startButton.onclick = function (){
     
     const game = new Game(ctx, 1350, 900, player);
     game.start();
+    startButton.classList.add('hidden');
 
 }; 
 
 document.addEventListener("keydown", (e) => {
 switch(e.code){
-    case "ArrowLeft": 
+   /* case "ArrowLeft": 
     player.speedX -= 2;
     break;
     case "ArrowRight": 
     player.speedX += 2;
-    break;
-
+    break; */
+    case 'ArrowUp':
+        player.speedY -= 1;
+        break;
+      case 'ArrowDown':
+        player.speedY += 1;
+        break;
 }
 }); 
 

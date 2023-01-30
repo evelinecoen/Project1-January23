@@ -70,7 +70,7 @@ class Game{
         if (crashed) {
             this.stop();
 
-           /* this.ctx.img = "Images\elon mars final.png";*/
+           /* this.ctx. = "Images\elon mars final.png";*/
             this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '46px, sans-serif';
             this.ctx.fillStyle = 'red';
