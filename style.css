@@ -14,11 +14,11 @@ body {
   }
   
   #game-board {
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
      
   }
   
@@ -53,8 +53,8 @@ align-items: center;
   } 
   
   
-
   #start {
+   /* background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);*/
       border:none;
       appearance:none;
       outline:none;
@@ -70,12 +70,16 @@ align-items: center;
   }
   button {   
     transition-duration: 0.4s; 
+    
   }
   button:hover {
       font-size:1.6em;
       background-color:#c47e05;
+      
   }
 
   .hidden {
     display: none;
 }
+
+
