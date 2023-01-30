@@ -74,6 +74,7 @@ class Enemy {
     draw(){
         
         this.ctx.drawImage(this.img2, this.x, this.y, this.w, this.h);
+
     }
 
 
