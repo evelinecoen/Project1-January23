@@ -12,27 +12,7 @@ body {
     font-size: 18px;
     font-family: "Verdana"
   }
-  /*
-  .logo-img {
-    width: 350px;
-  }*/
-
-  /*
-  .arrows-img {
-    width: 150px;
-  }*/
-
-  /*
-  body button {
-    font-size: 30px;
-    background-color: #870007;
-    color: #fff;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }*/
+ 
   
   #game-board {
       float: left;
@@ -40,12 +20,25 @@ body {
      
   }
   
+#container {
+  display:inline-block;
+    width:320px; 
+    height:480px;
+    margin: 0 auto; 
+    background-image: "Images/backgroung full screen.png"; 
+    position:relative; 
+    border:5px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 50px #333
+}
+
   #canvas {
     background-image: url('/Images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 1300px;
-    height: 900px
+    height: 900px;
+    position: relative;
   
   }
 
