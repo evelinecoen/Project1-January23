@@ -7,22 +7,15 @@ const startButton = document.getElementById('start');
 
 const player = new Component(220, 550, 50, 100, "image", ctx); 
 
+
 startButton.onclick = function (){
     
     const game = new Game(ctx, 1350, 900, player);
     game.start();
-    startButton.classList.add('hidden');
+    startButton.style.display = 'none';
+    canvas.classList.remove('hidden');
 
-backgroundImage.onclick = function (){ 
-    const backgroundImage = new Image();
-    // backgroundImage.src = "/Images/background.jpg"
-
-    game.start()
-    backgroundImage.classList.add('canvas');
-    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-}
-}; 
-
+};
 
 document.addEventListener("keydown", (e) => {
 switch(e.code){
@@ -46,6 +39,3 @@ document.addEventListener("keyup", () => {
     player.speedY = 0; 
 });
 
-/*
-let mySound = new Audio('my_audio_file.wav')
-mySound.play()*/

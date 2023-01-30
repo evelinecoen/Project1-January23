@@ -37,7 +37,7 @@ body {
   width: 1350px;
   height: 900px;
 }
-/*
+
   #canvas {
     background-image: url('Images/background.jpg');
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body {
     position: relative;
     border: #9f3102;
     align-items: center;
-  }*/
+  }
   
   
 
@@ -72,8 +72,7 @@ body {
       font-size:1.6em;
       background-color:#c47e05;
   }
-  
-  .hidden {
-    visibility: hidden;
-  }
 
+  .hidden {
+    display: none;
+}

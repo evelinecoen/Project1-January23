@@ -11,7 +11,6 @@ class Game{
     this.frames = 0; 
     this.enemies = [];
 
-    
     }
     
     start(){ 
@@ -27,6 +26,7 @@ class Game{
         this.Score();
         this.checkGameOver();
         this.gameOver(message);
+
     }
     
     stop(){ 
@@ -54,11 +54,11 @@ class Game{
         }
       }
       Score(){
-         ctx.font = "25px Arial";
-         ctx.fillStyle = 'white';
-         ctx.fillText(`Score: ${Math.floor(this.frames / 40)} `, canvas.width / 7, 50);
-         ctx.lineWidth = 1;
-
+         this.ctx.font = "25px Arial";
+         this.ctx.fillStyle = 'white';
+         const score = Math.floor(this.frames / 50);
+         this.ctx.fillText(`Score: ${score}`, canvas.width / 7, 50);
+         this.ctx.lineWidth = 1;
 
       }
     
@@ -66,22 +66,20 @@ class Game{
         const crashed = this.enemies.some((enemy) => {
             return this.player.crashWith(enemy); 
         });
-    
+        const score = Math.floor(this.frames / 50);
         if (crashed) {
             this.stop();
 
-            /*this.ctx.src = "/Images/elon mars final.png";*/
+            /*this.ctx.src = "/Images/elon-mars-final.png";*/
             this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '46px, sans-serif';
             this.ctx.fillStyle = 'red';
             this.ctx.fillText(`Game Over!`, 50, 50)
             this.ctx.lineWidth = 1;
-            this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`Your final score`, 80, 100);
+            this.ctx.fillStyle = 'black';
+            this.ctx.fillText(`Your final score: ${score}`, 80, 100);
             this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'white';
-            this.ctx.lineWidth = 1;
-            this.ctx.fillText(`${Math.floor(this.frames / 30)}`, 220, 150);
         
         }
       };
