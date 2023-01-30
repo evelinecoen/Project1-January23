@@ -31,6 +31,13 @@ body {
     box-shadow: 0 5px 50px #333
 }
 */ 
+
+.background-image {
+  background-image: url('Images/backgroung full screen.png');
+  width: 1350px;
+  height: 900px;
+}
+
   #canvas {
     background-image: url('Images/background.jpg');
     background-repeat: no-repeat;
