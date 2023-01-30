@@ -58,8 +58,7 @@ class Game{
          ctx.fillStyle = 'white';
          ctx.fillText(`Score: ${Math.floor(this.frames / 40)} `, canvas.width / 7, 50);
          ctx.lineWidth = 1;
-         /*ctx.strokeStyle = 'black';*/
-         /*ctx.strokeText('Score: ', 700, 150)*/
+
 
       }
     
@@ -71,7 +70,7 @@ class Game{
         if (crashed) {
             this.stop();
 
-            this.ctx.img = "Images\elon mars final.png";
+           /* this.ctx.img = "Images\elon mars final.png";*/
             this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '46px, sans-serif';
             this.ctx.fillStyle = 'red';

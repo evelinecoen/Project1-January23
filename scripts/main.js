@@ -30,3 +30,7 @@ document.addEventListener("keyup", () => {
     player.speedX = 0; 
     player.speedY = 0; 
 });
+
+/*
+let mySound = new Audio('my_audio_file.wav')
+mySound.play()*/
