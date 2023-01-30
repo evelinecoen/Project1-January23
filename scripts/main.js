@@ -13,22 +13,31 @@ startButton.onclick = function (){
     game.start();
     startButton.classList.add('hidden');
 
+backgroundImage.onclick = function (){ 
+    const backgroundImage = new Image();
+    // backgroundImage.src = "/Images/background.jpg"
+
+    game.start()
+    backgroundImage.classList.add('canvas');
+    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+}
 }; 
+
 
 document.addEventListener("keydown", (e) => {
 switch(e.code){
-   /* case "ArrowLeft": 
+    case "ArrowLeft": 
     player.speedX -= 2;
     break;
     case "ArrowRight": 
     player.speedX += 2;
-    break; */
-    case 'ArrowUp':
+    break; 
+    /*case 'ArrowUp':
         player.speedY -= 1;
         break;
       case 'ArrowDown':
         player.speedY += 1;
-        break;
+        break;*/
 }
 }); 
 

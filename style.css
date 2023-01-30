@@ -37,7 +37,7 @@ body {
   width: 1350px;
   height: 900px;
 }
-
+/*
   #canvas {
     background-image: url('Images/background.jpg');
     background-repeat: no-repeat;
@@ -46,9 +46,10 @@ body {
     height: 650px;
     position: relative;
     border: #9f3102;
-    
+    align-items: center;
+  }*/
   
-  }
+  
 
   #start {
       border:none;
