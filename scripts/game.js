@@ -21,7 +21,7 @@ class Game{
     update = () => { 
         this.frames++
         if (this.bgY <= this.bgYsize ){
-            this.bgY += 0.5
+            this.bgY += 0.3
         }
         this.clear();
         this.player.newPosition();
