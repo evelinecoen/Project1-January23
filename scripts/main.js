@@ -38,31 +38,7 @@ switch(e.code){
 }
  })
 
- /*
  
-document.addEventListener("keydown", (e) => {
-    switch(e.code){
-    if (player.x < 0) {
-        gamePlayer.speedX -= 2;
-      }
-        else{
-        player.speedX -= 3;
-      }
-      break;
-    case "ArrowRight":
-      if(player.x > 700){
-        player.speedX += 2;
-       }
-       else{
-        player.speedX+=6
-       }
-       break;
-    
-    }
-
-});
-
-*/
 
 document.addEventListener("keyup", () => {
     player.speedX = 0; 
