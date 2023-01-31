@@ -8,13 +8,14 @@ const startButton = document.getElementById('start');
 const player = new Component(220, 550, 220, 200, "image", ctx);   // change size image
 
 
-startButton.onclick = function (){
+startButton.onclick = function (){ 
     
     const game = new Game(ctx, 1300, 900, player);
+    
     game.start();
     startButton.style.display = 'none';
     canvas.classList.remove('hidden');
-
+console.log(lalala);
 };
 
 document.addEventListener("keydown", (e) => {

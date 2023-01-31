@@ -1,85 +1,96 @@
 body {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .game-intro {
-    float: left;
-  }
-  
-  .game-intro p {
-    font-size: 18px;
-    font-family: "Verdana"
-  }
-  
-  #game-board {
-  width: 100vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-image: url('Images/backgroung full screen.png'); 
+}
+
+.game-intro {
+
   height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-     
-  }
-  
+  justify-content: center;
+}
+
+#game-board {
+display: flex;
+justify-content: center;
+align-items: center;
+   
+}
+
 /* #container {
-  display:inline-block;
-    width:320px; 
-    height:480px;
-    margin: 0 auto; 
-    background-image: "Images/backgroung full screen.png"; 
-    position:relative; 
-    border:5px solid black; 
-    border-radius: 10px; 
-    box-shadow: 0 5px 50px #333
+display:inline-block;
+  width:320px; 
+  height:480px;
+  margin: 0 auto; 
+  background-image: "Images/backgroung full screen.png"; 
+  position:relative; 
+  border:5px solid black; 
+  border-radius: 10px; 
+  box-shadow: 0 5px 50px #333
 }
 */ 
 
-.background-image {
+#canvas {
+/*     background-image: url('Images/NEWbackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1000px;
+  height: 900px; */
+  position: absolute;
+/*   border: #9f3102; */
+  align-items: center;
+  font-family: Galaxia;
   background-image: url('Images/backgroung full screen.png');
   width: 1300px;
   height: 900px;
-}
+  margin-top: 70px;
+  
+} 
 
-  #canvas {
-/*     background-image: url('Images/NEWbackground.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1000px;
-    height: 900px; */
-    position: relative;
-  /*   border: #9f3102; */
-    align-items: center;
-    font-family: Galaxia;
-    ;
-  } 
-  
-  
-  #start {
-   /* background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);*/
-      border:none;
-      appearance:none;
-      outline:none;
-      display:inline-block;
-      font-size:1.5em;
-      cursor:pointer;
-      text-decoration:none;
-      padding:12px 48px 12px 48px;
-      border-radius:4px;
-      color:#ffffff;
-      background-color:#9f3102;
-      border: 2px solid #ffffff;
-  }
-  button {   
-    transition-duration: 0.4s; 
+
+#start {
+ /* background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);*/
+    border:none;
+    appearance:none;
+    outline:none;
+    display:flex;
+    justify-content: center;
     
-  }
-  button:hover {
-      font-size:1.6em;
-      background-color:#c47e05;
-      
-  }
-
-  .hidden {
-    display: none;
+    font-size:1.5em;
+    cursor:pointer;
+    text-decoration:none;
+    padding:12px 48px 12px 48px;
+    border-radius:14px;
+    color:#ffffff;
+    background-color:#9f3102;
+    border: 2px solid #ffffff;
+   /*  margin-bottom: 300px; */
+  
 }
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+/*
+button { 
+  
+ 
+}*/
+
+
+button:hover {
+    font-size:1.6em;
+    background-color:#c47e05;
+    transition-duration: 0.4s;
+}
+
+.hidden {
+  display: none;
+} 
