@@ -1,8 +1,10 @@
 body {
+  font-size: 'Cinzel';
   padding: 0;
   margin: 0;
   text-align: center;
   background-image: url('Images/backgroung full screen.png'); 
+  
 }
 
 .game-intro {
@@ -84,12 +86,51 @@ button {
  
 }*/
 
-
+/*
 button:hover {
     font-size:1.6em;
     background-color:#c47e05;
     transition-duration: 0.4s;
 }
+*/ 
+
+
+@font-face {
+  font-family: Cinzel;
+  src: url('https://fonts.googleapis.com/css?family=Cinzel');
+ 
+}
+
+button {
+  font-family: 'Cinzel';
+  border-color: black;
+  border-width: medium;
+    color: black;
+    font-size: 16px;
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 1em;
+}
+ 
+
+button:hover {
+  font-size:1.6em;
+    background-color:#006699;
+    transition-duration: 0.4s;
+}
+
+
+
+
 
 .hidden {
   display: none;
