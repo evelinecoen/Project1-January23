@@ -91,7 +91,7 @@ class Game{
             
             
 
-       this.gameOverScreen.src = "../Images/GAME OVER (3).png"
+       this.gameOverScreen.src = "../Images/elonmusksad.png"
        this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             /*this.ctx.src = "/Images/elon-mars-final.png";*/
             //this.ctx.fillRect(0, 0, canvas.width, 200);
