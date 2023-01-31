@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 
 const startButton = document.getElementById('start');
 
-const player = new Component(220, 550, 50, 100, "image", ctx); 
+const player = new Component(220, 550, 220, 200, "image", ctx);   // change size image
 
 
 startButton.onclick = function (){
@@ -20,10 +20,14 @@ startButton.onclick = function (){
 document.addEventListener("keydown", (e) => {
 switch(e.code){
     case "ArrowLeft": 
-    player.speedX -= 2;
+    if (player.x > 0){
+      player.speedX -= 2;
+    }
     break;
     case "ArrowRight": 
+    if (player.x < canvas.width - player.w) {
     player.speedX += 2;
+   }
     break; 
     /*case 'ArrowUp':
         player.speedY -= 1;
@@ -32,7 +36,33 @@ switch(e.code){
         player.speedY += 1;
         break;*/
 }
-}); 
+ })
+
+ /*
+ 
+document.addEventListener("keydown", (e) => {
+    switch(e.code){
+    if (player.x < 0) {
+        gamePlayer.speedX -= 2;
+      }
+        else{
+        player.speedX -= 3;
+      }
+      break;
+    case "ArrowRight":
+      if(player.x > 700){
+        player.speedX += 2;
+       }
+       else{
+        player.speedX+=6
+       }
+       break;
+    
+    }
+
+});
+
+*/
 
 document.addEventListener("keyup", () => {
     player.speedX = 0; 

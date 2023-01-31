@@ -13,7 +13,8 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "/Images/racket.png"
+    this.img.src= "../Images/vaqueiro.png"
+    
     
     }
 
@@ -21,7 +22,16 @@ class Component{
         this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
     }
 
-
+    boundaries(){
+        const rightBorder = canvas.width - this.w;
+        if (this.x < 0) {
+            this.x = 0;
+        }
+    
+        if (this.x > rightBorder) {
+            this.x = rightBorder;
+        } 
+         }
     newPosition(){
         this.x += this.speedX;
         this.y += this.speedY;
@@ -55,8 +65,6 @@ class Component{
  
   }
 
-
-
 class Enemy {
     constructor(x, y, w, h, color, ctx){
     this.x = x;
@@ -69,7 +77,7 @@ class Enemy {
     this.speedY = 0;
 
     this.img2 = new Image();
-    this.img2.src = "Images/explosion2.png"
+    this.img2.src = "../Images/explosion2.png"
     }
 
     draw(){

@@ -7,16 +7,19 @@ class Game{
     this.width = width;
     this.height = height;
     this.player = player;
+    // this.player.boundaries = boundaries;
     this.intervalId = null; 
     this.frames = 0; 
     this.enemies = [];
     this.bgY = 900
     this.bgYsize = 2000
+    this.gameOverScreen = new Image ()
     }
     
     start(){ 
         this.intervalId = setInterval(this.update, 1000/60); 
-    }
+    } 
+    
     
     update = () => { 
         this.frames++
@@ -26,13 +29,14 @@ class Game{
         this.clear();
         this.player.newPosition();
         this.player.draw();
+        this.player.boundaries();
         this.updateEnemies(); 
         this.Score();
         this.checkWin();
         this.checkGameOver();
-        this.gameOver(message);
+        //this.gameOver();
 
-    }
+    } 
     
     stop(){ 
     clearInterval(this.intervalId);
@@ -47,17 +51,19 @@ class Game{
     
     updateEnemies(){
         for(let i = 0; i < this.enemies.length; i++){
-            this.enemies[i].y += 3;
+            this.enemies[i].y += 3;  // to make faster enemies
             this.enemies[i].draw(); 
         }
-    
+
+    /* 
+          */ 
         
-        if(this.frames % 200 === 0){
+        if(this.frames % 100 === 0){
             
           let randomSize = Math.floor(Math.random() * 150 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
     
-          this.enemies.push(new Enemy (randomX, 0, randomSize, randomSize, "image", this.ctx)
+          this.enemies.push(new Enemy (randomX, 0, 100, 80, "image", this.ctx)
           );
         }
       }
@@ -72,7 +78,7 @@ class Game{
     }*/
 
       Score(){
-         this.ctx.font = "25px Arial";
+         this.ctx.font = "30px Arial";
          this.ctx.fillStyle = 'white';
          const score = Math.floor(this.frames / 50);
          this.ctx.fillText(`Score: ${score}`, canvas.width / 7, 50);
@@ -86,18 +92,23 @@ class Game{
         });
         const score = Math.floor(this.frames / 50);
         if (crashed) {
-            this.stop();
+            
+            
 
+       this.gameOverScreen.src = "../Images/elonmusksad.png"
+       this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             /*this.ctx.src = "/Images/elon-mars-final.png";*/
-            this.ctx.fillRect(0, 0, canvas.width, 200);
+            //this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '46px, sans-serif';
-            this.ctx.fillStyle = 'red';
-            this.ctx.fillText(`Game Over!`, 50, 50)
-            this.ctx.lineWidth = 1;
-            this.ctx.fillStyle = 'black';
+            //this.ctx.fillStyle = 'red';
+            //this.ctx.fillText(`Game Over!`, 50, 50)
+            //this.ctx.lineWidth = 1;
+            this.ctx.fillStyle = 'white';
             this.ctx.fillText(`Your final score: ${score}`, 80, 100);
-            this.ctx.lineWidth = 1;
+            //this.ctx.lineWidth = 1;
+            //this.ctx.drawImage 
            /* this.ctx.fillStyle = 'white';*/
+           this.stop();
         
         }
       };
