@@ -26,7 +26,7 @@ class Game{
     update = () => { 
         this.frames++
         if (this.bgY <= this.bgYsize ){
-            this.bgY += 0.3
+            this.bgY += 0.3 // change background frame
         }
         this.clear();
         this.player.newPosition();
@@ -53,10 +53,10 @@ class Game{
     
     updateEnemies(){
         for(let i = 0; i < this.enemies.length; i++){
-            this.enemies[i].y += 3;  // to make faster enemies
+            this.enemies[i].y += 6;  // to make faster enemies
             this.enemies[i].draw(); 
         }
-        if(this.frames % 100 === 0){
+        if(this.frames % 50 === 0){
             
           let randomSize = Math.floor(Math.random() * 150 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
@@ -100,13 +100,13 @@ class Game{
        this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             /*this.ctx.src = "/Images/elon-mars-final.png";*/
             //this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '35px, Galaxia.otf';
+            this.ctx.font = '50px, Galaxia.otf';
             //this.ctx.fillStyle = 'red';
             //this.ctx.fillText(`Game Over!`, 50, 50)
             //this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`${score}`, 120, 100);
-            //this.ctx.lineWidth = 1;
+            this.ctx.fillText(`${score}`, 850, 600);
+            //this.ctx.lineWidth = 1
             //this.ctx.drawImage 
            /* this.ctx.fillStyle = 'white';*/
            
@@ -124,8 +124,8 @@ class Game{
             //this.ctx.fillStyle = 'red';
             this.ctx.fillText(`YOU WIN!`, 50, 50)
             //this.ctx.lineWidth = 1;
-            this.ctx.fillStyle = 'black';
-            this.ctx.fillText(`${score}`, 120, 100);
+            this.ctx.fillStyle = 'white';
+            this.ctx.fillText(`${score}`, 850, 600);
             //this.ctx.lineWidth = 1;
         }
       } 

@@ -15,7 +15,6 @@ startButton.onclick = function (){
     game.start();
     startButton.style.display = 'none';
     canvas.classList.remove('hidden');
-console.log(lalala);
 };
 
 document.addEventListener("keydown", (e) => {

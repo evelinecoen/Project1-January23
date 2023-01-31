@@ -13,7 +13,7 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "../Images/vaqueiro.png"
+    this.img.src= "../Images/rocket+musk-.png"
     
     
     }
@@ -77,7 +77,7 @@ class Enemy {
     this.speedY = 0;
 
     this.img2 = new Image();
-    this.img2.src = "../Images/explosion2.png"
+    this.img2.src = "../Images/fireball.png"
     }
 
     draw(){
