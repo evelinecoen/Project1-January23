@@ -68,7 +68,7 @@ display:inline-block;
     padding:12px 48px 12px 48px;
     border-radius:14px;
     color:#ffffff;
-    background-color:#9f3102;
+    background-color: #006699;
     border: 2px solid #ffffff;
    /*  margin-bottom: 300px; */
   
@@ -79,20 +79,6 @@ display:inline-block;
   to {opacity: 1;}
 }
 
-
-/*
-button { 
-  
- 
-}*/
-
-/*
-button:hover {
-    font-size:1.6em;
-    background-color:#c47e05;
-    transition-duration: 0.4s;
-}
-*/ 
 
 
 @font-face {
@@ -122,7 +108,7 @@ button {
 }
  
 
-button:hover {
+#start:hover {
   font-size:1.6em;
     background-color:#006699;
     transition-duration: 0.4s;
