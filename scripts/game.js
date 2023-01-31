@@ -7,7 +7,6 @@ class Game{
     this.width = width;
     this.height = height;
     this.player = player;
-    // this.player.boundaries = boundaries;
     this.intervalId = null; 
     this.frames = 0; 
     this.enemies = [];
@@ -55,10 +54,6 @@ class Game{
             this.enemies[i].y += 3;  // to make faster enemies
             this.enemies[i].draw(); 
         }
-
-    /* 
-          */ 
-        
         if(this.frames % 100 === 0){
             
           let randomSize = Math.floor(Math.random() * 150 - 10) + 10;
