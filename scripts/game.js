@@ -14,6 +14,7 @@ class Game{
     this.bgY = 900
     this.bgYsize = 2000
     this.gameOverScreen = new Image ()
+    this.winScreen = new Image ()
     }
     
     start(){ 
@@ -78,7 +79,7 @@ class Game{
     }*/
 
       Score(){
-         this.ctx.font = "30px Arial";
+         this.ctx.font = "50px Galaxia"
          this.ctx.fillStyle = 'white';
          const score = Math.floor(this.frames / 50);
          this.ctx.fillText(`Score: ${score}`, canvas.width / 7, 50);
@@ -95,11 +96,11 @@ class Game{
             
             
 
-       this.gameOverScreen.src = "../Images/elonmusksad.png"
+       this.gameOverScreen.src = "../Images/GAME OVER (3).png"
        this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             /*this.ctx.src = "/Images/elon-mars-final.png";*/
             //this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '46px, sans-serif';
+            this.ctx.font = '35px, Galaxia.otf';
             //this.ctx.fillStyle = 'red';
             //this.ctx.fillText(`Game Over!`, 50, 50)
             //this.ctx.lineWidth = 1;
@@ -117,14 +118,15 @@ class Game{
         if (this.bgY >= this.bgYsize ) {
             this.stop ();
 
-            this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '46px, sans-serif';
-            this.ctx.fillStyle = 'red';
+            this.winScreen.src = "../Images/YOU WIN.png"
+            //this.ctx.fillRect(0, 0, canvas.width, 200);
+            this.ctx.font = '35px, Galaxia.otf';
+            //this.ctx.fillStyle = 'red';
             this.ctx.fillText(`YOU WIN!`, 50, 50)
-            this.ctx.lineWidth = 1;
+            //this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'black';
             this.ctx.fillText(`Your final score: ${score}`, 80, 100);
-            this.ctx.lineWidth = 1;
+            //this.ctx.lineWidth = 1;
         }
       } 
  }

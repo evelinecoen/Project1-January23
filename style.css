@@ -50,6 +50,8 @@ body {
     position: relative;
   /*   border: #9f3102; */
     align-items: center;
+    font-family: Galaxia;
+    ;
   } 
   
   
@@ -81,8 +83,3 @@ body {
   .hidden {
     display: none;
 }
-
-Score {
-  font-family: 'Bungee Spice';font-size: 22px;
-}
-
