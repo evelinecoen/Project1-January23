@@ -99,12 +99,7 @@ display:inline-block;
 }
 
 
-<<<<<<< HEAD
-
-.buttons {
-=======
 #start {
->>>>>>> 70e3ab272b68ef0da9a05bc73926c638546cbd00
   font-family: 'Galaxia';
   border-color: black;
   border-width: medium;
@@ -149,14 +144,6 @@ display:inline-block;
     font-weight: bolder;
 }
 
-<<<<<<< HEAD
-#instructio:hover {
-  font-size:1.6em;
-    background-color:#006699;
-    transition-duration: 0.4s;
-}
- 
-=======
 */
 
 #game-instructions {
@@ -166,7 +153,6 @@ display:inline-block;
   border
 
 }
->>>>>>> 70e3ab272b68ef0da9a05bc73926c638546cbd00
 
 .hidden {
   display: none;
