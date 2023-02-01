@@ -119,7 +119,7 @@ display:inline-block;
     margin: 1em;
     position: absolute;
     top: 10%;
-    right: 40%;
+    /* right: 45%; */ 
   
 }
  
@@ -163,8 +163,8 @@ display:inline-block;
  padding-top: 40px;
  margin-top: 40px;
  transform: rotate(45deg);
- width: 500px;  
-height: auto;
+ width: 480px;  
+ height: auto;
 }
 
 
@@ -186,3 +186,13 @@ height: auto;
 .hidden {
   display: none;
 } 
+
+/*
+.game-instructions {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-left: 770px;
+  
+}

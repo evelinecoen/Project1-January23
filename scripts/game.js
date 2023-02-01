@@ -69,9 +69,9 @@ class Game{
 
       Score(){
          this.ctx.font = "50px Galaxia"
-         this.ctx.fillStyle = 'white';
+         this.ctx.fillStyle = 'orange';
          const score = Math.floor(this.frames / 50);
-         this.ctx.fillText(`Score: ${score}`, canvas.width / 7, 50);
+         this.ctx.fillText(`Score: ${score}`, canvas.width / 10, 50);
          this.ctx.lineWidth = 1;
          /*rgba(242,150,0,200)*/ 
       }
