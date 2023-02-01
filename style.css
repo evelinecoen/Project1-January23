@@ -4,6 +4,7 @@ body {
   margin: 0;
   text-align: center;
   background-image: url('Images/backgroung full screen.png'); 
+  overflow: hidden;
   
 }
 
@@ -123,12 +124,21 @@ display:inline-block;
 }
  
 
+ #start:hover {
+    transform: scale(1.5);
+    background-color:#130B39;
+    color: white;
+ }
+/*
+
 #start:hover {
   font-size:1.6em;
     background-color:#006699;
     transition-duration: 0.4s;
-}
+    transform: scale(1.1);
+  }
  
+*/ 
 
 /* 
 #instructions {
@@ -152,6 +162,8 @@ display:inline-block;
  padding-top: 40px;
  margin-top: 40px;
  transform: rotate(45deg);
+ max-width: 200%;  
+height: auto;
 }
 
 

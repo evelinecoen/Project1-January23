@@ -67,15 +67,6 @@ class Game{
         }
       }
 
-/*
-      explode(x,y){
-        let explosion = new Image()
-        explosion.src= "/Images/explosion2.png"
-        this.ctx.drawImage(explosion,x,y,200,200) 
-        audio4.play()
-
-    }*/
-
       Score(){
          this.ctx.font = "50px Galaxia"
          this.ctx.fillStyle = 'white';
