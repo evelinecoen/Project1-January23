@@ -102,14 +102,21 @@ class Game{
       
       checkWin (){
         if (this.bgY >= this.bgYsize ) {
+          startButton.style.display = 'block'; 
+          startButton.style.position = 'absolute'; 
+          startButton.style.top = '20px';
             this.stop ();
+
+           /*
+            const winSound = new Audio ("/audio/crowd-cheer-ii-6263.mp3");
+            winSound.play();*/
 
             const score = Math.floor(this.frames / 50);
             this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
             this.ctx.font = '50px, Galaxia';
             this.ctx.fillStyle = 'white';
             this.ctx.fillText(`${score}`, 450, 720);
-           themeMusic.pause();
+            themeMusic.pause();
           
         }
       } 
