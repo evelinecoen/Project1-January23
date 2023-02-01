@@ -123,7 +123,7 @@ display:inline-block;
 }
  
 
-#start:hover /* #instructions:hover */  {
+#start:hover {
   font-size:1.6em;
     background-color:#006699;
     transition-duration: 0.4s;

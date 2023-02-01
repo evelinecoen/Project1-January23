@@ -27,7 +27,7 @@ class Game{
     update = () => { 
         this.frames++
         if (this.bgY <= this.bgYsize ){
-            this.bgY += 0.3 // change background frame
+            this.bgY += 0.7 // change background frame
         }
         this.clear();
         this.player.newPosition();
@@ -54,7 +54,7 @@ class Game{
     
     updateEnemies(){
         for(let i = 0; i < this.enemies.length; i++){
-            this.enemies[i].y += 6;  // to make faster enemies
+            this.enemies[i].y += 7;  // to make faster enemies
             this.enemies[i].draw(); 
         }
         if(this.frames % 50 === 0){
