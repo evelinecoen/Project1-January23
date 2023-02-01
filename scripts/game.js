@@ -99,18 +99,11 @@ class Game{
           this.stop();
        
        this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
-            /*this.ctx.src = "/Images/elon-mars-final.png";*/
-            //this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '50px, Galaxia';
-            //this.ctx.fillStyle = 'red';
-            //this.ctx.fillText(`Game Over!`, 50, 50)
-            //this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'white';
             this.ctx.fillText(`${score}`, 850, 600);
-            //this.ctx.lineWidth = 1
-            //this.ctx.drawImage 
-           /* this.ctx.fillStyle = 'white';*/
-           
+            themeMusic.pause()
+          
 
         }
       };
@@ -121,14 +114,11 @@ class Game{
 
             const score = Math.floor(this.frames / 50);
             this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
-            //this.ctx.fillRect(0, 0, canvas.width, 200);
             this.ctx.font = '50px, Galaxia';
-            //this.ctx.fillStyle = 'red';
-            /*this.ctx.fillText(`YOU WIN!`, 50, 50)*/
-            //this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'white';
             this.ctx.fillText(`${score}`, 450, 600);
-            //this.ctx.lineWidth = 1;
+           themeMusic.pause();
+          
         }
       } 
  }

@@ -7,10 +7,12 @@ const startButton = document.getElementById('start');
 
 const player = new Component(220, 710, 110, 110, "image", ctx);   // change size image
 
+const themeMusic = new Audio ("../audio/xFilesSoundForGame.mp3")
 
 startButton.onclick = function (){ 
-    
-    const game = new Game(ctx, 1300, 900, player);
+  themeMusic.currentTime=0; 
+  themeMusic.play()
+  const game = new Game(ctx, 1300, 900, player);
     
     game.start();
     startButton.style.display = 'none';
@@ -29,12 +31,7 @@ switch(e.code){
     player.speedX += 2;
    }
     break; 
-    /*case 'ArrowUp':
-        player.speedY -= 1;
-        break;
-      case 'ArrowDown':
-        player.speedY += 1;
-        break;*/
+
 }
  })
 

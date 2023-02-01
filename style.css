@@ -118,7 +118,7 @@ display:inline-block;
     margin: 1em;
     position: absolute;
     top: 10%;
-  right: 40%;
+    right: 40%;
   
 }
  
@@ -146,13 +146,14 @@ display:inline-block;
 
 */
 
-#game-instructions {
-  font-family: 'Galaxia';
-  color: white;
-  font-size: 20px;
-  border
+ 
 
+.rocket-start-screen {
+ padding-top: 40px;
+ margin-top: 40px;
+ transform: rotate(45deg);
 }
+
 
 .hidden {
   display: none;
