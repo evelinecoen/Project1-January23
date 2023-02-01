@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 
 const startButton = document.getElementById('start');
 
-const player = new Component(220, 680, 220, 200, "image", ctx);   // change size image
+const player = new Component(220, 710, 110, 110, "image", ctx);   // change size image
 
 
 startButton.onclick = function (){ 

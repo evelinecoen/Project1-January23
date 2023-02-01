@@ -14,8 +14,9 @@ class Game{
     this.bgYsize = 2000
     this.gameOverScreen = new Image ()
     this.winScreen = new Image ()
+    this.winScreen.src = "/Images/YOU WIN.png"
     this.gameOverScreen.src = "../Images/GAME OVER (3).png"
-    this.winScreen.src = "../Images/YOU WIN.png"
+    
     }
     
     start(){ 
@@ -36,7 +37,7 @@ class Game{
         this.Score();
         this.checkWin();
         this.checkGameOver();
-        //this.gameOver();
+        
 
     } 
     
@@ -45,7 +46,7 @@ class Game{
     }
     
     clear(){
-        /* this.ctx.clearRect(0, 0, this.width, this.height); */
+        
         let background = new Image ()
         background.src= "../Images/NEWbackground.png";
         this.ctx.drawImage(background, 0, this.bgY, canvas.width, - this.bgYsize);
@@ -118,14 +119,15 @@ class Game{
         if (this.bgY >= this.bgYsize ) {
             this.stop ();
 
-          
+            const score = Math.floor(this.frames / 50);
+            this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
             //this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '35px, Galaxia';
+            this.ctx.font = '50px, Galaxia';
             //this.ctx.fillStyle = 'red';
-            this.ctx.fillText(`YOU WIN!`, 50, 50)
+            /*this.ctx.fillText(`YOU WIN!`, 50, 50)*/
             //this.ctx.lineWidth = 1;
             this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`${score}`, 850, 600);
+            this.ctx.fillText(`${score}`, 450, 600);
             //this.ctx.lineWidth = 1;
         }
       } 
