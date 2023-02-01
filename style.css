@@ -126,8 +126,9 @@ display:inline-block;
 
  #start:hover {
     transform: scale(1.5);
-    background-color:#130B39;
+    background-color:transparent;
     color: white;
+    border-color: white;
  }
 /*
 
@@ -162,10 +163,25 @@ display:inline-block;
  padding-top: 40px;
  margin-top: 40px;
  transform: rotate(45deg);
- max-width: 200%;  
+ width: 500px;  
 height: auto;
 }
 
+
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 35px); }
+  100%   { transform: translate(0, -0px); }   
+}
 
 .hidden {
   display: none;

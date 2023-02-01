@@ -14,8 +14,8 @@ class Game{
     this.bgYsize = 2000
     this.gameOverScreen = new Image ()
     this.winScreen = new Image ()
-    this.winScreen.src = "/Images/YOU WIN.png"
-    this.gameOverScreen.src = "../Images/GAME OVER (3).png"
+    this.winScreen.src = "/Images/YOUWIN NEW.png"
+    this.gameOverScreen.src = "../Images/GAME OVER NEW (4).png"
     
     }
     
@@ -73,7 +73,7 @@ class Game{
          const score = Math.floor(this.frames / 50);
          this.ctx.fillText(`Score: ${score}`, canvas.width / 7, 50);
          this.ctx.lineWidth = 1;
-
+         /*rgba(242,150,0,200)*/ 
       }
     
       checkGameOver(){
@@ -88,14 +88,15 @@ class Game{
           startButton.style.top = '20px'; 
  
           this.stop();
-       
-       this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
+           const explosionSound = new Audio ("/audio/docs_assets_sounds_Som Explosão 1.mp3")
+            explosionSound.play()
+            
+            this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             this.ctx.font = '50px, Galaxia';
             this.ctx.fillStyle = 'white';
             this.ctx.fillText(`${score}`, 850, 600);
             themeMusic.pause()
-          
-
+        
         }
       };
       
@@ -107,7 +108,7 @@ class Game{
             this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
             this.ctx.font = '50px, Galaxia';
             this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`${score}`, 450, 600);
+            this.ctx.fillText(`${score}`, 450, 720);
            themeMusic.pause();
           
         }

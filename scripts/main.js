@@ -7,11 +7,11 @@ const startButton = document.getElementById('start');
 
 const player = new Component(220, 570, 120, 290, "image", ctx);   // change size image
 
-const themeMusic = new Audio ("../audio/xFilesSoundForGame.mp3")
+const themeMusic = new Audio ("../audio/xFilesSoundForGame.mp3") // AUDIO 
 
 startButton.onclick = function (){ 
   themeMusic.currentTime=0; 
-  themeMusic.play()
+  themeMusic.play() // Audio
   const game = new Game(ctx, 1300, 900, player);
     
     game.start();
@@ -34,8 +34,6 @@ switch(e.code){
 
 }
  })
-
- 
 
 document.addEventListener("keyup", () => {
     player.speedX = 0; 
