@@ -100,7 +100,7 @@ class Game{
        this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
             /*this.ctx.src = "/Images/elon-mars-final.png";*/
             //this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '50px, Galaxia.otf';
+            this.ctx.font = '50px, Galaxia';
             //this.ctx.fillStyle = 'red';
             //this.ctx.fillText(`Game Over!`, 50, 50)
             //this.ctx.lineWidth = 1;
@@ -120,7 +120,7 @@ class Game{
 
           
             //this.ctx.fillRect(0, 0, canvas.width, 200);
-            this.ctx.font = '35px, Galaxia.otf';
+            this.ctx.font = '35px, Galaxia';
             //this.ctx.fillStyle = 'red';
             this.ctx.fillText(`YOU WIN!`, 50, 50)
             //this.ctx.lineWidth = 1;

@@ -42,20 +42,21 @@ display:inline-block;
   background-size: cover;
   width: 1000px;
   height: 900px; */
-  position: absolute;
+  position: relative;
 /*   border: #9f3102; */
   align-items: center;
-  font-family: Galaxia;
+  font-family: Cinzel;
   background-image: url('Images/backgroung full screen.png');
   width: 1300px;
   height: 900px;
   margin-top: 70px;
-  
+  border: 30px ridge rgb(23, 23, 100)
 } 
 
 
-#start {
- /* background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);*/
+/* #start {
+  background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);
+
     border:none;
     appearance:none;
     outline:none;
@@ -70,13 +71,21 @@ display:inline-block;
     color:#ffffff;
     background-color: #006699;
     border: 2px solid #ffffff;
-   /*  margin-bottom: 300px; */
+
+     margin-bottom: 300px; 
   
 }
-
+ */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+
+@font-face {
+  font-family: Galaxia;
+  src: url('./font/Galaxia.otf');
+ 
 }
 
 
@@ -87,8 +96,9 @@ display:inline-block;
  
 }
 
-button {
-  font-family: 'Cinzel';
+
+#start {
+  font-family: 'Galaxia';
   border-color: black;
   border-width: medium;
     color: black;
@@ -101,10 +111,17 @@ button {
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
-    position: relative;
+    /* position: relative; */ 
     overflow: hidden;
     transition: 0.5s;
     margin: 1em;
+
+    position: absolute;
+    left:  50%;
+    right: 30%;
+    bottom: 30%;
+    top: 30%;
+
 }
  
 

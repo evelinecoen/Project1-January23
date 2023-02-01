@@ -13,7 +13,7 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "../Images/rocket+musk-.png"
+    this.img.src= "../Images/Ilustração_Sem_Título-removebg-preview.png"
     
     
     }
