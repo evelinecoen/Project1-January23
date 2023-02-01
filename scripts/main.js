@@ -14,29 +14,29 @@ startButton.onclick = function (){
   themeMusic.play() // Audio
   const game = new Game(ctx, 1300, 900, player);
     
-    game.start();
-    startButton.style.display = 'none';
-    canvas.classList.remove('hidden');
+  game.start();
+  startButton.style.display = 'none';
+  canvas.classList.remove('hidden');
 };
 
 document.addEventListener("keydown", (e) => {
 switch(e.code){
-    case "ArrowLeft": 
-    if (player.x > 0){
-      player.speedX -= 2;
+  case "ArrowLeft": 
+  if (player.x > 0){
+  player.speedX -= 2;
     }
-    break;
-    case "ArrowRight": 
-    if (player.x < canvas.width - player.w) {
-    player.speedX += 2;
+  break;
+  case "ArrowRight": 
+  if (player.x < canvas.width - player.w) {
+  player.speedX += 2;
    }
-    break; 
-
+  break; 
 }
  })
 
+
 document.addEventListener("keyup", () => {
-    player.speedX = 0; 
-    player.speedY = 0; 
+  player.speedX = 0; 
+  player.speedY = 0; 
 });
 

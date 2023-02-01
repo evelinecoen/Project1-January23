@@ -5,12 +5,9 @@ body {
   text-align: center;
   background-image: url('Images/backgroung full screen.png'); 
   overflow: hidden;
-  
 }
 
-
 .game-intro {
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -22,8 +19,7 @@ body {
 #game-board {
 display: flex;
 justify-content: center;
-align-items: center;
-   
+align-items: center;  
 }
 
 /* #container {
@@ -40,13 +36,13 @@ display:inline-block;
 */ 
 
 #canvas {
-/*     background-image: url('Images/NEWbackground.png');
+/*background-image: url('Images/NEWbackground.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 1000px;
   height: 900px; */
   position: absolute;
-/*   border: #9f3102; */
+/*border: #9f3102; */
   align-items: center;
   font-family: Cinzel;
   background-image: url('Images/backgroung full screen.png');
@@ -56,16 +52,13 @@ display:inline-block;
   border: 30px ridge rgb(11, 11, 63);
 } 
 
-
 /* #start {
-  background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);
-
+    background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);
     border:none;
     appearance:none;
     outline:none;
     display:flex;
     justify-content: center;
-    
     font-size:1.5em;
     cursor:pointer;
     text-decoration:none;
@@ -74,36 +67,31 @@ display:inline-block;
     color:#ffffff;
     background-color: #006699;
     border: 2px solid #ffffff;
-
-     margin-bottom: 300px; 
-  
-}
- */
+    margin-bottom: 300px; 
+}*/
+ 
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
 
 @font-face {
   font-family: Galaxia;
   src: url('./font/Galaxia.otf');
  
 }
-
-
-
+/*
 @font-face {
   font-family: Cinzel;
   src: url('https://fonts.googleapis.com/css?family=Cinzel');
  
-}
+}*/
 
 
 #start {
-  font-family: 'Galaxia';
-  border-color: black;
-  border-width: medium;
+    font-family: 'Galaxia';
+    border-color: black;
+    border-width: medium;
     color: black;
     font-size: 20px;
     border-radius: 0.5em;
@@ -122,7 +110,6 @@ display:inline-block;
     /* right: 45%; */ 
   
 }
- 
 
  #start:hover {
     transform: scale(1.5);
@@ -157,8 +144,6 @@ display:inline-block;
 
 */
 
- 
-
 .rocket-start-screen {
  padding-top: 40px;
  margin-top: 40px;
@@ -166,7 +151,6 @@ display:inline-block;
  width: 480px;  
  height: auto;
 }
-
 
 .floating { 
   animation-name: floating;
@@ -186,13 +170,3 @@ display:inline-block;
 .hidden {
   display: none;
 } 
-
-/*
-.game-instructions {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-left: 770px;
-  
-}

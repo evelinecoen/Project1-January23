@@ -1,6 +1,5 @@
 /** @type{HTMLCanvasElement} */
 
-
 class Game{
     constructor(ctx, width, height, player){
     this.ctx = ctx;
@@ -23,7 +22,6 @@ class Game{
         this.intervalId = setInterval(this.update, 1000/60); 
     } 
     
-    
     update = () => { 
         this.frames++
         if (this.bgY <= this.bgYsize ){
@@ -38,7 +36,6 @@ class Game{
         this.checkWin();
         this.checkGameOver();
         
-
     } 
     
     stop(){ 
@@ -59,7 +56,7 @@ class Game{
         }
         if(this.frames % 50 === 0){
             
-          let randomSize = Math.floor(Math.random() * 150 - 10) + 10;
+          let randomSize = Math.floor(Math.random() * 180 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
     
           this.enemies.push(new Enemy (randomX, 0, 100, 80, "image", this.ctx)
@@ -73,12 +70,11 @@ class Game{
          const score = Math.floor(this.frames / 50);
          this.ctx.fillText(`Score: ${score}`, canvas.width / 10, 50);
          this.ctx.lineWidth = 1;
-         /*rgba(242,150,0,200)*/ 
       }
     
       checkGameOver(){
         const crashed = this.enemies.some((enemy) => {
-            return this.player.crashWith(enemy); 
+          return this.player.crashWith(enemy); 
         });
         const score = Math.floor(this.frames / 50);
         if (crashed) {
@@ -88,14 +84,14 @@ class Game{
           startButton.style.top = '20px'; 
  
           this.stop();
-           const explosionSound = new Audio ("/audio/docs_assets_sounds_Som Explosão 1.mp3")
-            explosionSound.play()
+          const explosionSound = new Audio ("/audio/docs_assets_sounds_Som Explosão 1.mp3")
+          explosionSound.play()
             
-            this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
-            this.ctx.font = '50px, Galaxia';
-            this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`${score}`, 850, 600);
-            themeMusic.pause()
+          this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
+          this.ctx.font = '50px, Galaxia';
+          this.ctx.fillStyle = 'white';
+          this.ctx.fillText(`${score}`, 850, 600);
+          themeMusic.pause()
         
         }
       };
@@ -105,19 +101,21 @@ class Game{
           startButton.style.display = 'block'; 
           startButton.style.position = 'absolute'; 
           startButton.style.top = '20px';
-            this.stop ();
+          this.stop ();
 
            /*
             const winSound = new Audio ("/audio/crowd-cheer-ii-6263.mp3");
             winSound.play();*/
-
-            const score = Math.floor(this.frames / 50);
-            this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
-            this.ctx.font = '50px, Galaxia';
-            this.ctx.fillStyle = 'white';
-            this.ctx.fillText(`${score}`, 450, 720);
-            themeMusic.pause();
           
+
+          const score = Math.floor(this.frames / 50);
+          this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
+          this.ctx.font = '50px, Galaxia';
+          this.ctx.fillStyle = 'white';
+          this.ctx.fillText(`${score}`, 450, 720);
+          themeMusic.pause();
+            /*winSound.pause();*/
+        
         }
       } 
  }

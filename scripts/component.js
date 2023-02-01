@@ -1,6 +1,5 @@
 /** @type{HTMLCanvasElement} */
 
-
 class Component{
     constructor(x, y, w, h, color, ctx){
     this.x = x;
@@ -14,7 +13,6 @@ class Component{
 
     this.img = new Image();
     this.img.src= "Images/ElonRocketFinal.png"
-    
     
     }
 
@@ -62,8 +60,8 @@ class Component{
         this.left() > enemy.right()
         ); 
     }
- 
   }
+
 
 class Enemy {
     constructor(x, y, w, h, color, ctx){
@@ -83,14 +81,11 @@ class Enemy {
     draw(){
         
         this.ctx.drawImage(this.img2, this.x, this.y, this.w, this.h);
-
     }
-
 
     newPosition(){
         this.x += this.speedX;
         this.y += this.speedY;
-
     }
 
     top(){
@@ -108,6 +103,5 @@ class Enemy {
     right(){
         return this.x + this.w;
     }
-    
 }
 
