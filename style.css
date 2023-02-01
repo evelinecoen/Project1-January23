@@ -99,7 +99,7 @@ display:inline-block;
 }
 
 
-.buttons {
+#start {
   font-family: 'Galaxia';
   border-color: black;
   border-width: medium;
@@ -113,33 +113,23 @@ display:inline-block;
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
-    /* position: relative; */ 
     overflow: hidden;
     transition: 0.5s;
     margin: 1em;
-
     position: absolute;
     top: 10%;
   right: 40%;
-    /* 850, 600 score h and w ? */ 
   
-    /* left:  50%;
-    right: 30%;
-    : 30%;
-    top: 30%; */ 
-
-    
-  /* width: 200px;
-  height: 0px; */
 }
  
 
-.buttons:hover {
+#start:hover /* #instructions:hover */  {
   font-size:1.6em;
     background-color:#006699;
     transition-duration: 0.4s;
 }
 
+/* 
 #instructions {
   font-family: 'Galaxia';
   border-color: black;
@@ -153,7 +143,15 @@ display:inline-block;
     font-weight: bolder;
 }
 
+*/
 
+#game-instructions {
+  font-family: 'Galaxia';
+  color: white;
+  font-size: 20px;
+  border
+
+}
 
 .hidden {
   display: none;
