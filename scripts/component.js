@@ -12,7 +12,7 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "Images/ElonRocketFinal.png"
+    this.img.src= "/Images/ElonRocket-removed.png"
     
     }
 
