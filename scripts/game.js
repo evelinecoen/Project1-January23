@@ -14,7 +14,7 @@ class Game{
     this.gameOverScreen = new Image ()
     this.winScreen = new Image ()
     this.winScreen.src = "/Images/YOUWIN NEW.png"
-    this.gameOverScreen.src = "../Images/GAME OVER NEW (4).png"
+    this.gameOverScreen.src = "./Images/GAME OVER NEW (4).png"
     
     }
     
@@ -45,7 +45,7 @@ class Game{
     clear(){
         
         let background = new Image ()
-        background.src= "../Images/NEWbackground.png";
+        background.src= "./Images/NEWbackground.png";
         this.ctx.drawImage(background, 0, this.bgY, canvas.width, - this.bgYsize);
     }
     
@@ -54,7 +54,7 @@ class Game{
             this.enemies[i].y += 7;  // to make faster enemies
             this.enemies[i].draw(); 
         }
-        if(this.frames % 50 === 0){
+        if(this.frames % 30 === 0){
             
           let randomSize = Math.floor(Math.random() * 180 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
