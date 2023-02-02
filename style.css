@@ -22,27 +22,8 @@ justify-content: center;
 align-items: center;  
 }
 
-/* #container {
-display:inline-block;
-  width:320px; 
-  height:480px;
-  margin: 0 auto; 
-  background-image: "Images/backgroung full screen.png"; 
-  position:relative; 
-  border:5px solid black; 
-  border-radius: 10px; 
-  box-shadow: 0 5px 50px #333
-}
-*/ 
-
 #canvas {
-/*background-image: url('Images/NEWbackground.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1000px;
-  height: 900px; */
   position: absolute;
-/*border: #9f3102; */
   align-items: center;
   font-family: Cinzel;
   background-image: url('Images/backgroung full screen.png');
@@ -51,24 +32,6 @@ display:inline-block;
   margin-top: 70px;
   border: 30px ridge rgb(11, 11, 63);
 } 
-
-/* #start {
-    background-image: url(../Project1-January23/Images/NicePng_start-button-png_1108890.png);
-    border:none;
-    appearance:none;
-    outline:none;
-    display:flex;
-    justify-content: center;
-    font-size:1.5em;
-    cursor:pointer;
-    text-decoration:none;
-    padding:12px 48px 12px 48px;
-    border-radius:14px;
-    color:#ffffff;
-    background-color: #006699;
-    border: 2px solid #ffffff;
-    margin-bottom: 300px; 
-}*/
  
 @keyframes fadeIn {
   from {opacity: 0;}
@@ -80,13 +43,6 @@ display:inline-block;
   src: url('./font/Galaxia.otf');
  
 }
-/*
-@font-face {
-  font-family: Cinzel;
-  src: url('https://fonts.googleapis.com/css?family=Cinzel');
- 
-}*/
-
 
 #start {
     font-family: 'Galaxia';
@@ -107,8 +63,6 @@ display:inline-block;
     margin: 1em;
     position: absolute;
     top: 10%;
-    /* right: 45%; */ 
-  
 }
 
  #start:hover {
@@ -117,32 +71,6 @@ display:inline-block;
     color: white;
     border-color: white;
  }
-/*
-
-#start:hover {
-  font-size:1.6em;
-    background-color:#006699;
-    transition-duration: 0.4s;
-    transform: scale(1.1);
-  }
- 
-*/ 
-
-/* 
-#instructions {
-  font-family: 'Galaxia';
-  border-color: black;
-  border-width: medium;
-    color: black;
-    font-size: 20px;
-    border-radius: 0.5em;
-    width: 22em;
-    height: 5em;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-
-*/
 
 .rocket-start-screen {
  padding-top: 40px;

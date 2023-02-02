@@ -13,7 +13,7 @@ class Game{
     this.bgYsize = 2000
     this.gameOverScreen = new Image ()
     this.winScreen = new Image ()
-    this.winScreen.src = "/Images/YOUWIN NEW.png"
+    this.winScreen.src = "./Images/YOUWIN NEW.png"
     this.gameOverScreen.src = "./Images/GAME OVER NEW (4).png"
     
     }
@@ -51,10 +51,10 @@ class Game{
     
     updateEnemies(){
         for(let i = 0; i < this.enemies.length; i++){
-            this.enemies[i].y += 7;  // to make faster enemies
+            this.enemies[i].y += 6;  // to make faster enemies
             this.enemies[i].draw(); 
         }
-        if(this.frames % 30 === 0){
+        if(this.frames % 35 === 0){
             
           let randomSize = Math.floor(Math.random() * 180 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
@@ -84,7 +84,7 @@ class Game{
           startButton.style.top = '20px'; 
  
           this.stop();
-          const explosionSound = new Audio ("/audio/docs_assets_sounds_Som Explosão 1.mp3")
+          const explosionSound = new Audio ("./audio/docs_assets_sounds_Som Explosão 1.mp3")
           explosionSound.play()
             
           this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
@@ -103,9 +103,9 @@ class Game{
           startButton.style.top = '20px';
           this.stop ();
 
-           /*
-            const winSound = new Audio ("/audio/crowd-cheer-ii-6263.mp3");
-            winSound.play();*/
+           
+            const winSound = new Audio ("./audio/crowd-cheer-ii-6263.mp3");
+            winSound.play();
           
 
           const score = Math.floor(this.frames / 50);
@@ -114,7 +114,7 @@ class Game{
           this.ctx.fillStyle = 'white';
           this.ctx.fillText(`${score}`, 450, 720);
           themeMusic.pause();
-            /*winSound.pause();*/
+          /*winSound.pause();*/
         
         }
       } 

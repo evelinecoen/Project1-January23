@@ -12,7 +12,7 @@ class Component{
     this.speedY = 0;
 
     this.img = new Image();
-    this.img.src= "/Images/ElonRocket-removed.png"
+    this.img.src= "./Images/ElonRocket-removed.png"
     
     }
 
@@ -75,7 +75,7 @@ class Enemy {
     this.speedY = 0;
 
     this.img2 = new Image();
-    this.img2.src = "../Images/fireball.png"
+    this.img2.src = "./Images/fireball.png"
     }
 
     draw(){
