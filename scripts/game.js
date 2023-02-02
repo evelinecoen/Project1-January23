@@ -104,7 +104,7 @@ class Game{
           this.stop ();
 
            
-            const winSound = new Audio ("/audio/crowd-cheer-5-sec.mp3");
+            const winSound = new Audio ("audio/crowd-cheer-5-sec.mp3");
             winSound.play();
           
 
