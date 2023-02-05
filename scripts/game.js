@@ -9,8 +9,8 @@ class Game{
     this.intervalId = null; 
     this.frames = 0; 
     this.enemies = [];
-    this.bgY = 900
-    this.bgYsize = 2000
+    this.bgY = 450
+    this.bgYsize = 1000
     this.gameOverScreen = new Image ()
     this.winScreen = new Image ()
     this.winScreen.src = "./Images/YOUWIN NEW.png"
@@ -51,7 +51,7 @@ class Game{
     
     updateEnemies(){
         for(let i = 0; i < this.enemies.length; i++){
-            this.enemies[i].y += 6;  // to make faster enemies
+            this.enemies[i].y += 3;  // to make faster enemies
             this.enemies[i].draw(); 
         }
         if(this.frames % 35 === 0){
@@ -59,13 +59,13 @@ class Game{
           let randomSize = Math.floor(Math.random() * 180 - 10) + 10;
           let randomX = Math.floor(Math.random() * this.width - randomSize) + randomSize;
     
-          this.enemies.push(new Enemy (randomX, 0, 100, 80, "image", this.ctx)
+          this.enemies.push(new Enemy (randomX, 0, 50, 40, "image", this.ctx)
           );
         }
       }
 
       Score(){
-         this.ctx.font = "50px Galaxia"
+         this.ctx.font = "25px Galaxia"
          this.ctx.fillStyle = 'orange';
          const score = Math.floor(this.frames / 50);
          this.ctx.fillText(`Score: ${score}`, canvas.width / 10, 50);
@@ -87,10 +87,10 @@ class Game{
           const explosionSound = new Audio ("./audio/docs_assets_sounds_Som Explosão 1.mp3")
           explosionSound.play()
             
-          this.ctx.drawImage(this.gameOverScreen, 0, 0, 1350, 900) 
+          this.ctx.drawImage(this.gameOverScreen, 0, 0, 675, 450) 
           this.ctx.font = '50px, Galaxia';
           this.ctx.fillStyle = 'white';
-          this.ctx.fillText(`${score}`, 850, 600);
+          this.ctx.fillText(`${score}`, 425, 300);
           themeMusic.pause()
         
         }
@@ -109,10 +109,10 @@ class Game{
           
 
           const score = Math.floor(this.frames / 50);
-          this.ctx.drawImage(this.winScreen, 0, 0, 1350, 900) 
+          this.ctx.drawImage(this.winScreen, 0, 0, 675, 450) 
           this.ctx.font = '50px, Galaxia';
           this.ctx.fillStyle = 'white';
-          this.ctx.fillText(`${score}`, 450, 720);
+          this.ctx.fillText(`${score}`, 225, 360);
           themeMusic.pause();
           /*winSound.pause();*/
         

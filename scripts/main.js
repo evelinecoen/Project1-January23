@@ -5,14 +5,14 @@ const ctx = canvas.getContext("2d");
 
 const startButton = document.getElementById('start');
 
-const player = new Component(220, 560, 100, 280, "image", ctx);   // change size image
+const player = new Component(110, 280, 50, 140, "image", ctx);   // change size image
 
 const themeMusic = new Audio ("./audio/xFilesSoundForGame.mp3") // AUDIO 
 
 startButton.onclick = function (){ 
   themeMusic.currentTime=0; 
   themeMusic.play() // Audio
-  const game = new Game(ctx, 1300, 900, player);
+  const game = new Game(ctx, 675, 450, player);
     
   game.start();
   startButton.style.display = 'none';

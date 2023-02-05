@@ -27,10 +27,11 @@ align-items: center;
   align-items: center;
   font-family: Cinzel;
   background-image: url('Images/backgroung full screen.png');
-  width: 1300px;
-  height: 900px;
+  width: 675px;
+  height: 450px;
   margin-top: 70px;
-  border: 30px ridge rgb(11, 11, 63);
+  border: 15px ridge rgb(6, 6, 43);
+  margin-bottom: 3%;
 } 
  
 @keyframes fadeIn {
@@ -49,7 +50,7 @@ align-items: center;
     border-color: black;
     border-width: medium;
     color: black;
-    font-size: 20px;
+    font-size: 11px;
     border-radius: 0.5em;
     width: 22em;
     height: 5em;
@@ -76,7 +77,7 @@ align-items: center;
  padding-top: 40px;
  margin-top: 40px;
  transform: rotate(45deg);
- width: 480px;  
+ width: 200px;  
  height: auto;
 }
 
@@ -98,3 +99,12 @@ align-items: center;
 .hidden {
   display: none;
 } 
+
+.gameinstructions {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 400px;
+}
